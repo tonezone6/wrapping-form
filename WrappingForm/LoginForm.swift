@@ -6,7 +6,7 @@
 //
 
 struct LoginForm {
-
+    
     @Email    var email: String?
     @Password var password: String?
 }
@@ -16,11 +16,8 @@ extension LoginForm {
     var emailInvalid: Bool {
         email == nil
     }
+    
     var passwordInvalid: Bool {
         password == nil
-    }
-    
-    var invalid: Bool {
-        emailInvalid || passwordInvalid
     }
 }

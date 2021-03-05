@@ -32,6 +32,7 @@ struct LoginView: View {
             .accentColor(.red)
             .buttonStyle(PlainButtonStyle())
             .navigationTitle("Login")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

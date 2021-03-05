@@ -13,12 +13,14 @@ class LoginViewModel: ObservableObject {
     @Published var emailInvalid = true
     @Published var password = ""
     @Published var passwordInvalid = true
+    
     @Published private(set) var disabled = false
     
     var subscriptions: [AnyCancellable] = []
     
     init() {
-        let form = $email.combineLatest($password)
+        let form = $email
+            .combineLatest($password)
             .map(LoginForm.init)
             
         form.map { $0.emailInvalid }
@@ -29,7 +31,7 @@ class LoginViewModel: ObservableObject {
             .assign(to: \.passwordInvalid, on: self)
             .store(in: &subscriptions)
         
-        form.map { $0.invalid }
+        form.map { $0.emailInvalid || $0.passwordInvalid }
             .assign(to: \.disabled, on: self)
             .store(in: &subscriptions)
     }

@@ -10,3 +10,5 @@ struct LoginForm {
     @Password var password: String?
 }
 ```
+
+![WrappingForm](rec.gif)
