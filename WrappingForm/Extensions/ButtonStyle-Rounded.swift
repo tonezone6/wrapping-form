@@ -22,10 +22,12 @@ extension RoundedButtonStyle {
         let configuration: RoundedButtonStyle.Configuration
         
         var foreground: Color {
-            configuration.isPressed ? Color.white.opacity(0.5) : .white
+            enabled ?
+                (configuration.isPressed ? Color.white.opacity(0.5) : .white) :
+                Color.white.opacity(0.5)
         }
         
-        var colors: [Color] {
+        var gradientColors: [Color] {
             enabled ?
                 [configuration.isPressed ? .red : .orange, .red] :
                 [Color.gray.opacity(0.5), Color.gray.opacity(0.5)]
@@ -33,9 +35,10 @@ extension RoundedButtonStyle {
 
         var gradient: LinearGradient {
             LinearGradient(
-                gradient: Gradient(colors: colors),
+                gradient: Gradient(colors: gradientColors),
                 startPoint: .leading,
-                endPoint: .trailing)
+                endPoint: .trailing
+            )
         }
         
         var body: some View {

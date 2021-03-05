@@ -10,11 +10,11 @@ import Combine
 class LoginViewModel: ObservableObject {
     
     @Published var email = ""
-    @Published var emailInvalid = true
     @Published var password = ""
+    @Published var emailInvalid = true
     @Published var passwordInvalid = true
     
-    @Published private(set) var disabled = false
+    @Published private(set) var disabled = true
     
     var subscriptions: [AnyCancellable] = []
     

@@ -28,7 +28,6 @@ struct CustomTextField: View {
                     .font(.subheadline)
                     .keyboardType(keyboard)
             }
-            
             Spacer()
 
             if !text.isEmpty {
