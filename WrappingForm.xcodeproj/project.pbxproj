@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA421FDE25F295E000016C08 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FA421FDD25F295E000016C08 /* README.md */; };
+		FA42595225FB79D20004D1BE /* simulator.gif in Resources */ = {isa = PBXBuildFile; fileRef = FA42595125FB79D20004D1BE /* simulator.gif */; };
 		FAF2EBEE25F24833005EE4FE /* WrappingFormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EBED25F24833005EE4FE /* WrappingFormApp.swift */; };
 		FAF2EBF025F24833005EE4FE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EBEF25F24833005EE4FE /* LoginView.swift */; };
 		FAF2EBF225F24834005EE4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF2EBF125F24834005EE4FE /* Assets.xcassets */; };
@@ -17,11 +18,11 @@
 		FAF2EC0B25F24901005EE4FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC0A25F24901005EE4FE /* LoginViewModel.swift */; };
 		FAF2EC1325F26506005EE4FE /* ButtonStyle-Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC1225F26506005EE4FE /* ButtonStyle-Rounded.swift */; };
 		FAF2EC2725F26CEC005EE4FE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */; };
-		FAFAC08925F2C7B100EA0B80 /* rec.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAFAC08825F2C7B100EA0B80 /* rec.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA421FDD25F295E000016C08 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FA42595125FB79D20004D1BE /* simulator.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = simulator.gif; sourceTree = "<group>"; };
 		FAF2EBEA25F24833005EE4FE /* WrappingForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WrappingForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2EBED25F24833005EE4FE /* WrappingFormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappingFormApp.swift; sourceTree = "<group>"; };
 		FAF2EBEF25F24833005EE4FE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		FAF2EC0A25F24901005EE4FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FAF2EC1225F26506005EE4FE /* ButtonStyle-Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle-Rounded.swift"; sourceTree = "<group>"; };
 		FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		FAFAC08825F2C7B100EA0B80 /* rec.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rec.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				FA421FDD25F295E000016C08 /* README.md */,
-				FAFAC08825F2C7B100EA0B80 /* rec.gif */,
+				FA42595125FB79D20004D1BE /* simulator.gif */,
 				FAF2EBEC25F24833005EE4FE /* WrappingForm */,
 				FAF2EBEB25F24833005EE4FE /* Products */,
 			);
@@ -164,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA421FDE25F295E000016C08 /* README.md in Resources */,
-				FAFAC08925F2C7B100EA0B80 /* rec.gif in Resources */,
+				FA42595225FB79D20004D1BE /* simulator.gif in Resources */,
 				FAF2EBF525F24834005EE4FE /* Preview Assets.xcassets in Resources */,
 				FAF2EBF225F24834005EE4FE /* Assets.xcassets in Resources */,
 			);

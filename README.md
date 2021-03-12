@@ -11,4 +11,4 @@ struct LoginForm {
 }
 ```
 
-![WrappingForm](rec.gif)
+![WrappingForm](simulator.gif)

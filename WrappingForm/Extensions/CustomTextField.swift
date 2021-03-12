@@ -48,18 +48,18 @@ extension CustomTextField {
                 Text("clear")
                     .font(.footnote)
                     .fontWeight(.bold)
-                    .foregroundColor(.accentColor)
             })
     }
     
     var trailingImage: some View {
-        let name = warning ? "exclamationmark.circle.fill" : "checkmark.circle.fill"
+        let name = warning ? "exclamationmark.circle" : "checkmark.circle"
+        let foregroundColor: Color = warning ? .red : .green
         
         return Image(systemName: name)
             .resizable()
             .scaledToFit()
             .frame(width: 24, height: 24)
-            .foregroundColor(Color.gray.opacity(0.3))
+            .foregroundColor(foregroundColor)
     }
 }
 
