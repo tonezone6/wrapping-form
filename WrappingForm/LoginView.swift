@@ -8,32 +8,41 @@
 import SwiftUI
 
 struct LoginView: View {
-    
-    @ObservedObject var viewModel = LoginViewModel()
-    
+    @StateObject var validator = Validator()
+        
     var body: some View {
         NavigationView {
             Form {
                 CustomTextField(
-                    title: "Email", keyboard: .emailAddress,
-                    text: $viewModel.email,
-                    warning: $viewModel.emailInvalid
+                    title: "Email", text: $validator.email,
+                    keyboard: .emailAddress,
+                    warning: emailWarning
                 )
+                
                 CustomTextField(
-                    title: "Password", secure: true,
-                    text: $viewModel.password,
-                    warning: $viewModel.passwordInvalid
+                    title: "Password", text: $validator.password,
+                    secure: true,
+                    warning: passWarning
                 )
-                Button("Login", action: viewModel.login)
+                
+                Button("Login", action: validator.login)
                     .buttonStyle(RoundedButtonStyle())
                     .padding([.top, .bottom])
-                    .disabled(viewModel.disabled)
+                    .disabled(validator.disabled)
             }
-            .accentColor(.red)
+            .accentColor(.orange)
             .buttonStyle(PlainButtonStyle())
-            .navigationTitle("Login")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Login")
         }
+    }
+    
+    var emailWarning: Bool {
+        validator.credentials?.emailInvalid ?? false
+    }
+    
+    var passWarning: Bool {
+        validator.credentials?.passInvalid ?? false
     }
 }
 

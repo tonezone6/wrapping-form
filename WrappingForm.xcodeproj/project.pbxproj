@@ -14,8 +14,8 @@
 		FAF2EBF225F24834005EE4FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF2EBF125F24834005EE4FE /* Assets.xcassets */; };
 		FAF2EBF525F24834005EE4FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF2EBF425F24834005EE4FE /* Preview Assets.xcassets */; };
 		FAF2EBFE25F24860005EE4FE /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EBFD25F24860005EE4FE /* PropertyWrappers.swift */; };
-		FAF2EC0725F248D2005EE4FE /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC0625F248D2005EE4FE /* LoginForm.swift */; };
-		FAF2EC0B25F24901005EE4FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC0A25F24901005EE4FE /* LoginViewModel.swift */; };
+		FAF2EC0725F248D2005EE4FE /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC0625F248D2005EE4FE /* Credentials.swift */; };
+		FAF2EC0B25F24901005EE4FE /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC0A25F24901005EE4FE /* Validator.swift */; };
 		FAF2EC1325F26506005EE4FE /* ButtonStyle-Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC1225F26506005EE4FE /* ButtonStyle-Rounded.swift */; };
 		FAF2EC2725F26CEC005EE4FE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
@@ -30,8 +30,8 @@
 		FAF2EBF425F24834005EE4FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAF2EBF625F24834005EE4FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAF2EBFD25F24860005EE4FE /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
-		FAF2EC0625F248D2005EE4FE /* LoginForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-		FAF2EC0A25F24901005EE4FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FAF2EC0625F248D2005EE4FE /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		FAF2EC0A25F24901005EE4FE /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		FAF2EC1225F26506005EE4FE /* ButtonStyle-Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle-Rounded.swift"; sourceTree = "<group>"; };
 		FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,9 +68,12 @@
 		FAF2EBEC25F24833005EE4FE /* WrappingForm */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2EC0625F248D2005EE4FE /* LoginForm.swift */,
-				FAF2EC0A25F24901005EE4FE /* LoginViewModel.swift */,
+				FAF2EBED25F24833005EE4FE /* WrappingFormApp.swift */,
+				FAF2EC0625F248D2005EE4FE /* Credentials.swift */,
+				FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */,
 				FAF2EBEF25F24833005EE4FE /* LoginView.swift */,
+				FAF2EC0A25F24901005EE4FE /* Validator.swift */,
+				FAF2EBFD25F24860005EE4FE /* PropertyWrappers.swift */,
 				FAF2EC1825F26591005EE4FE /* Extensions */,
 				FAF2EC1B25F2660A005EE4FE /* Supporting files */,
 			);
@@ -88,9 +91,7 @@
 		FAF2EC1825F26591005EE4FE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2EC2625F26CEC005EE4FE /* CustomTextField.swift */,
 				FAF2EC1225F26506005EE4FE /* ButtonStyle-Rounded.swift */,
-				FAF2EBFD25F24860005EE4FE /* PropertyWrappers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 		FAF2EC1B25F2660A005EE4FE /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				FAF2EBED25F24833005EE4FE /* WrappingFormApp.swift */,
 				FAF2EBF125F24834005EE4FE /* Assets.xcassets */,
 				FAF2EBF625F24834005EE4FE /* Info.plist */,
 				FAF2EBF325F24834005EE4FE /* Preview Content */,
@@ -177,12 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAF2EC0B25F24901005EE4FE /* LoginViewModel.swift in Sources */,
+				FAF2EC0B25F24901005EE4FE /* Validator.swift in Sources */,
 				FAF2EBF025F24833005EE4FE /* LoginView.swift in Sources */,
 				FAF2EC1325F26506005EE4FE /* ButtonStyle-Rounded.swift in Sources */,
 				FAF2EBEE25F24833005EE4FE /* WrappingFormApp.swift in Sources */,
 				FAF2EC2725F26CEC005EE4FE /* CustomTextField.swift in Sources */,
-				FAF2EC0725F248D2005EE4FE /* LoginForm.swift in Sources */,
+				FAF2EC0725F248D2005EE4FE /* Credentials.swift in Sources */,
 				FAF2EBFE25F24860005EE4FE /* PropertyWrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.as.WrappingForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -346,7 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.as.WrappingForm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

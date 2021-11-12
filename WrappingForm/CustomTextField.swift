@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct CustomTextField: View {
-    
     let title: String
-    var secure: Bool = false
-    var keyboard: UIKeyboardType = .default
-    
     @Binding var text: String
-    @Binding var warning: Bool
+    var keyboard: UIKeyboardType = .default
+    var secure: Bool = false
+    var warning: Bool
     
     var body: some View {
         HStack {
@@ -40,7 +38,6 @@ struct CustomTextField: View {
 }
 
 extension CustomTextField {
-    
     var clearButton: some View {
         Button(
             action: { text.removeAll() },
@@ -66,19 +63,21 @@ extension CustomTextField {
 struct CustomTextField_Previews: PreviewProvider {
     static var previews: some View {
         CustomTextField(
-            title: "Email", secure: false,
-            keyboard: .emailAddress,
+            title: "Email",
             text: .constant("john.doe@jd.com"),
-            warning: .constant(true)
+            keyboard: .emailAddress,
+            secure: false,
+            warning: true
         )
         .previewLayout(.sizeThatFits)
         .previewDisplayName("Light")
         
         CustomTextField(
-            title: "Email", secure: false,
-            keyboard: .emailAddress,
+            title: "Email",
             text: .constant("john.doe@jd.com"),
-            warning: .constant(false)
+            keyboard: .emailAddress,
+            secure: false,
+            warning: false
         )
         .previewLayout(.sizeThatFits)
         .background(Color(.systemBackground))

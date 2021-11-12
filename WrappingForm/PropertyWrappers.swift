@@ -7,13 +7,11 @@
 
 import Foundation
 
-@propertyWrapper
-public struct Email {
-    
+@propertyWrapper public struct Email {
     public var wrappedValue: String? {
         didSet {
             let valid = wrappedValue?.isValidEmail ?? false
-            wrappedValue = valid ? wrappedValue : nil
+            self.wrappedValue = valid ? wrappedValue : nil
         }
     }
 
@@ -23,9 +21,7 @@ public struct Email {
     }
 }
 
-@propertyWrapper
-public struct Password {
-    
+@propertyWrapper public struct Password {
     public var wrappedValue: String? {
         didSet {
             let valid = wrappedValue?.isValidPassword ?? false
@@ -40,17 +36,14 @@ public struct Password {
 }
 
 private extension String {
-    
     var isValidEmail: Bool {
         let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
         let predicate = NSPredicate(format: "SELF MATCHES %@", email)
         return predicate.evaluate(with: self)
     }
-    
+
+    /// minimum 8 characters, 1 letter, 1 number
     var isValidPassword: Bool {
-        /// minimum 8 characters
-        /// at least 1 letter
-        /// at least 1 number
         let password = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", password)
         return predicate.evaluate(with: self)

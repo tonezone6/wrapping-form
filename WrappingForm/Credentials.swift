@@ -5,19 +5,19 @@
 //  Created by Alex Stratu on 05.03.2021.
 //
 
-struct LoginForm {
-    
+struct Credentials {
     @Email    var email: String?
     @Password var password: String?
-}
-
-extension LoginForm {
+        
+    var invalid: Bool {
+        emailInvalid || passInvalid
+    }
     
     var emailInvalid: Bool {
         email == nil
     }
     
-    var passwordInvalid: Bool {
+    var passInvalid: Bool {
         password == nil
     }
 }
